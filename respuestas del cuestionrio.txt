@@ -1,0 +1,23 @@
+a) hecho
+b) los parametros obligatorios es file_name, el opcional es n
+c) el archivo debe estar en mi caso en esta ruta Path('C:/Users/suare/OneDrive/Escritorio/trabajo de python plus/dataset/songs_normalize.csv'), pero ese es el de mi ruta para que no de ninguna excepcion, pero el archivo esta inicialmente en 'songs_n ormalize.csv' lo cual tendria que estar en el escritorio, o sea en la misma ruta de donde esta el script de python, el programa da error al abrirse porque no se especifica que conjunto de caracteres predeterminadose se pueden usar, o sea el encoding y ademas lo abro para modo lecturta nomas
+
+
+d) agregaria otro manejar dentro de la funcion my_funcion entre el def y el with para manejar el formato del archivo, o sea que este dentro del with, y la excepcion cuando se termina el codigo del with, y que la excepcion retorn none con un mensaje diciendo que no se pudo ejecutar el archivo con este formato
+
+e) my_songs es un tipo de dato de lista, que tiene adentro otra lista, lo que podemos hacer para isarla fuera del try, es definir my_songs afuera del try como una lista vacia y luego dentro del try esta se llena,
+algo asi :
+my_songs=[]
+try:
+    my_songs = my_function(ruta)
+except FileNotFoundError:
+    print("Tenemos un problema!!")
+finally:
+     for song in my_songs:
+         print(song)
+print(my_songs) 
+
+chatgp) la solucion que nos dio chatgpt es la de poner una excepcion que adentro tiene el with, por si el formato de archivo csv no es ese y modifica la parte en donde llama a la funciones, no usa excepciones en las llamadas a funciones, solo pregunta si el archivo my_songs no esta vacio
+
+
+comentario: lo hago por las dudas si es que no me cargael video a tiempo
